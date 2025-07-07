@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import Pages from 'vite-plugin-pages';
 import { imagetools } from 'vite-imagetools';
 import { defineConfig } from 'vite';
-import crax from './crax.config';
+import crax from './crax.config.mjs';
 
 export default defineConfig({
   plugins: [

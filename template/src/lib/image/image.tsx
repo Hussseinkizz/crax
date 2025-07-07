@@ -1,4 +1,4 @@
-import config from '../../../crax.config';
+import config from '../../../crax.config.mjs';
 import { type ImgHTMLAttributes } from 'react';
 
 type Props = {

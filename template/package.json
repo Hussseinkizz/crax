@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "vite --port 3000",
     "build": "tsc -b && vite build",
+    "ssg": "vite build && tsm react-snap.config.ts && react-snap",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -76,6 +77,8 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "react-snap": "^1.23.0",
+    "tsm": "^2.3.0",
     "tw-animate-css": "^1.2.9",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
