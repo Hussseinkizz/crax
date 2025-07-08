@@ -7,8 +7,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 3000",
-    "build": "tsc -b && vite build",
-    "ssg": "vite build && tsm react-snap.config.ts && react-snap",
+    "build": "vite build",
+    "sitemap": "tsm .crax/scripts/generate-sitemap.mjs",
+    "static": "react-snap --config .crax/react-snap.config.mjs",
+    "ssg": "vite build && pnpm sitemap && pnpm static",
     "lint": "eslint .",
     "preview": "vite preview"
   },

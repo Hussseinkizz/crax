@@ -4,25 +4,37 @@ import tailwindcss from '@tailwindcss/vite';
 import Pages from 'vite-plugin-pages';
 import { imagetools } from 'vite-imagetools';
 import { defineConfig } from 'vite';
-import crax from './crax.config.mjs';
+import { fileURLToPath } from 'url';
+
+// Dynamically loading crax config
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const crax = await import(path.resolve(__dirname, '.crax/config.mjs')).then(
+  (mod) => mod.default
+);
 
 export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-
-    // 1. File-based routing
     Pages({
       dirs: crax.pagesDir,
       extensions: crax.pageExtensions,
+      extendRoute(route) {
+        if (route.path?.startsWith('/static')) {
+          return {
+            ...route,
+            path: route.path.replace(/^\/static/, '') || '/',
+          };
+        }
+        return route;
+      },
     }),
-    // 2. Image optimization (e.g. <img src="/img.jpg?w=400;800&format=webp&as=srcset">)
     imagetools(),
   ],
-
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+      '@crax': path.resolve(__dirname, './.crax'),
     },
   },
 });

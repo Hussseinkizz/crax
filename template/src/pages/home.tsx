@@ -1,5 +1,4 @@
-import { Image } from '@/lib/image/image';
-
+import { Image } from '@crax/image';
 export default function HomePage() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-4">

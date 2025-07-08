@@ -10,10 +10,13 @@ export interface ImageConfig {
 
 export interface SSGConfig {
   enabled: boolean;
-  includedRoutes: string[];
+  robots: {
+    disallow: string[];
+  };
 }
 
 export interface CraxConfig {
+  siteUrl?: string; // optional but used for sitemap
   pagesDir: string;
   pageExtensions: string[];
   images: ImageConfig;

@@ -1,23 +1,13 @@
-/** @typedef {import('./types/config.types.ts').CraxConfig} */
+/** @typedef {import('.crax/types/config.types.ts').CraxConfig} CraxConfig */
 
-/** @type {import('./types/config.types.ts').CraxConfig} */
+/** @type {CraxConfig} */
 const config = {
-  pagesDir: 'src/pages',
-  pageExtensions: ['tsx', 'mdx'],
-
-  images: {
-    deviceSizes: [320, 640, 960, 1280],
-    formats: ['webp', 'avif'],
-    defaultProps: {
-      sizes: '(max-width: 640px) 100vw, 640px',
-      loading: 'lazy',
-      decoding: 'async',
-    },
-  },
-
+  siteUrl: 'https://craxjs.js.org', // Change to your actual site URL
   ssg: {
     enabled: true,
-    includedRoutes: ['/', '/about'],
+    robots: {
+      disallow: ['/admin'], // Example disallowed paths
+    },
   },
 };
 

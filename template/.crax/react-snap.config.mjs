@@ -1,4 +1,4 @@
-import crax from './crax.config.mjs';
+import crax from './config.mjs';
 
 export default {
   routes: crax.ssg.includedRoutes,

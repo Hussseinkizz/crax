@@ -5,6 +5,7 @@ import routes from 'virtual:generated-pages-react';
 import './index.css';
 
 const App = () => {
+  console.log('Routes:', routes);
   const element = useRoutes(routes);
   return element;
 };

@@ -1,4 +1,4 @@
-import { Image } from '@/lib/image/image';
+import { Image } from '@crax/image';
 
 export default function HomePage() {
   return (
