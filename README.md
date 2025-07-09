@@ -53,11 +53,11 @@ npx create-crax-app your-cool-app
 ## 🧭 Roadmap
 
 - [x] Initial Setup
-- [x] Markdown Support
-- [ ] File-based Routing
-- [ ] Image Optimization
-- [ ] PWA Capabilities
-- [ ] Rendering Modes (SSG)
+- [x] Markdown Support (only under docs for now)
+- [x] File-based Routing
+- [x] Image Optimization
+- [x] PWA Capabilities (in progress)
+- [x] Rendering Modes (SSG) (in progress)
 - [ ] CLI Tooling
 - [ ] Shipping
 - [ ] Built-in Utilities
