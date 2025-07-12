@@ -1,0 +1,22 @@
+{
+  "name": "@crax/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "crax": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc && npm run copy-config",
+    "copy-config": "cp src/default.config.mjs dist/default.config.mjs"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "kolorist": "^1.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "typescript": "~5.8.3"
+  }
+}
